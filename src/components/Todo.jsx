@@ -22,7 +22,7 @@ function Todo() {
        setActiveData(newData)
     }
     const deleteTodo = (text)=>{
-        let newData = data.filter((item)=>item.text !== text);
+        let newData = data.filter((item,index)=>index !== text);
         setData(newData);
         setActiveData(newData)
     }
