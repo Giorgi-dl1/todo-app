@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from 'react';
+import './app.css'
+import Todo from './components/Todo';
 function App() {
+  const [light,setLight] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className={light ? 'App light':'App'}>
+      <div className="background-img"/>
+      <div className="todo-container">
+        <Todo/>
+      </div>
+    </main>
   );
 }
 
