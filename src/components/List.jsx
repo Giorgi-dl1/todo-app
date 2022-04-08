@@ -30,22 +30,6 @@ function List({data,setCompleted,deleteTodo,filterData,clearCompleted,filter}) {
                 )
             })
             }
-           {/* {data.map((item,index)=>{
-                return(
-                    <div key={index} className={item.completed?'item completed':'item active'}>
-                        <div className="circle-text">
-                            <div className="circle" onClick={()=>setCompleted(index)}>
-                                {item.completed && <img src={checkIcon} alt='check icon'/>}
-                            </div>
-                            <p onClick={()=>setCompleted(index)}>{item.text}</p>
-                        </div>
-                        
-                        <div className="delete-btn" onClick={()=>deleteTodo(index)}>
-                            <img src={deleteBtn} alt="delete icon" />
-                        </div>
-                    </div>
-                )
-            })}  */}
         </div>
         
         <footer>

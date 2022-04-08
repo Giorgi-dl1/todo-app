@@ -7,7 +7,7 @@ function App() {
     <main className={light ? 'App light':'App'}>
       <div className="background-img"/>
       <div className="todo-container">
-        <Todo/>
+        <Todo light={light} setLight={setLight}/>
       </div>
     </main>
   );

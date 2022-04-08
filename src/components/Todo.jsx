@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import List from './List'
 import sun from '../images/icon-sun.svg'
+import moon from '../images/icon-moon.svg'
 
-function Todo() {
+function Todo({light,setLight}) {
     const [data,setData] = useState([
         {text:'add light mode',completed:false},
         {text:'make todo list',completed:true},
@@ -69,8 +70,8 @@ function Todo() {
 
             <div className="todo-header">
                 <h1>TODO</h1>
-                <div className="icon">
-                    <img src={sun} alt="icon" />
+                <div className="icon" onClick={()=>setLight(!light)}>
+                    <img src={light?moon:sun} alt="icon" />
                 </div>
             </div>
             <div className="input">
@@ -91,7 +92,13 @@ function Todo() {
             clearCompleted={clearCompleted}
             filter={filter}
             />
-            
+            <div className="mobile-filter">
+                <div className="filter">
+                    <p className={filter=='all'?'action choice':'action'} onClick={()=>filterData('all')}>All</p>
+                    <p className={filter=='active'?'action choice':'action'} onClick={()=>filterData('active')}>Active</p>
+                    <p className={filter=='completed'?'action choice':'action'} onClick={()=>filterData('completed')}>Completed</p>
+                </div>
+            </div>
         </div>
   )
 }

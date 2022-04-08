@@ -26,6 +26,7 @@ The designs were created to the following widths:
 
 ### Dark Theme
 
+
 - Very Dark Blue: hsl(235, 21%, 11%)
 - Very Dark Desaturated Blue: hsl(235, 24%, 19%)
 - Light Grayish Blue: hsl(234, 39%, 85%)

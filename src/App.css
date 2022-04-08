@@ -11,6 +11,9 @@ body{
 .App{
     color: hsl(234, 39%, 85%);
 }
+.light{
+    color: hsl(235, 19%, 35%);
+}
 .background-img{
     background-image: url('./images/bg-desktop-dark.jpg');
     background-repeat: no-repeat;
@@ -24,6 +27,9 @@ body{
 .todo-container{
     background-color: hsl(235, 21%, 11%);
     min-height: calc(100vh - 240px);
+}
+.light .todo-container{
+    background-color: hsl(0, 0%, 98%);
 }
 .todo{
     margin: -170px;
@@ -51,6 +57,7 @@ body{
     border-radius: 7px;
     margin-top: 2rem;
 }
+
 .circle{
     width: 25px;
     height: 25px;
@@ -65,6 +72,12 @@ body{
     color: hsl(234, 39%, 85%);
     font-size: 18px;
     font-family: 'Josefin Sans', sans-serif;
+}
+.light .todo-container .todo .input{
+    background-color: white;
+}
+.light .todo-container .todo .input input{
+    color: hsl(235, 19%, 35%);
 }
 .todos{
     border-radius: 7px;
@@ -84,6 +97,16 @@ body{
     background-color: hsl(235, 24%, 19%);
     padding: .7rem 1rem;
     border-bottom: 1px solid hsl(233, 14%, 35%);
+}
+.light .todo-container .todo .todos .todos-cont .item{
+    background-color: white;
+    border-bottom: 1px solid hsl(233, 11%, 84%);
+}
+.todo-container .todo .todos{
+    box-shadow: 2px 3px 7px hsl(237, 26%, 14%);
+}
+.light .todo-container .todo .todos{
+    box-shadow: 2px 3px 10px -2px hsl(236, 9%, 61%);
 }
 .active .circle{
     cursor: pointer;
@@ -106,18 +129,27 @@ body{
     border-radius: 50%;
     background-color: hsl(235, 24%, 19%);
 }
+.light .todo-container .todo .todos .todos-cont .active .circle::before{
+    background-color: white;
+}
 .active p{
     margin-left: 1rem;
     cursor: pointer;
 }
 .delete-btn{
     filter: brightness(51%);
-    /* position: relative; */
     left: 2rem;
 }
+
 .active:hover .delete-btn{
     filter: brightness(100%);
     cursor: pointer;
+}
+.light .todo-container .todo .todos .todos-cont .active .delete-btn{
+    filter: brightness(100);
+}
+.light .todo-container .todo .todos .todos-cont .active:hover .delete-btn{
+    filter: brightness(100%);
 }
 .choice{
     color: hsl(220, 98%, 61%);
@@ -130,6 +162,10 @@ body{
     background-color: hsl(235, 24%, 19%);
     font-size: 15px;
     color:hsl(233, 14%, 35%) ;
+}
+.light .todo-container .todo .todos footer{
+    background-color: white;
+
 }
 .filter{
     display: flex;
@@ -156,6 +192,10 @@ body{
     text-decoration: line-through;
     color: hsl(233, 14%, 35%);
 }
+.light .todo-container .todo .todos .todos-cont .completed p{
+    text-decoration:none;
+    color: hsl(233, 11%, 84%);
+}
 .circle-text{
     display: flex;
     align-items: center;
@@ -165,4 +205,34 @@ body{
     text-align: center;
     padding: 1rem 0;
     border-bottom: 1px solid hsl(233, 14%, 35%);
+}
+.light .todo-container .todo .todos .todos-cont .no-todos{
+    background-color: white;
+    border-bottom: 1px solid hsl(233, 11%, 84%);
+}
+.mobile-filter{
+    display: none;
+}
+@media(max-width:450px){
+    .filter{
+        display: none;
+    }
+    .mobile-filter{
+        background-color: hsl(235, 24%, 19%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0;
+        border-radius: 5px;
+        margin-top: 1rem ;
+    }
+    .light .todo-container .todo .mobile-filter{
+        background-color: white;
+        box-shadow: 2px 3px 10px -2px hsl(236, 9%, 61%);
+
+    }
+    .mobile-filter .filter{
+      display: flex;
+      gap: 1rem;
+    }
 }
