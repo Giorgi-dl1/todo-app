@@ -12,14 +12,25 @@ function Todo() {
     const [input,setInput] = useState('');
     const [filter,setFilter] = useState('all');
     const setCompleted = (i)=>{
-       let newData=data.map((item,index)=>{
-            if(index == i ){
+       let newData=data.map((item)=>{
+            if(item.text == i ){
+                console.log({...item,completed:true})
                 return {...item,completed:true}
             }
+            console.log(item,'ch')
             return item
        })
+       
        setData(newData);
-       setActiveData(newData)
+       if(filter == 'active'){
+            setActiveData(newData.filter(item => !item.completed));
+       }else if(filter == 'completed'){
+           setActiveData(newData.filter(item => item.completed));
+       }else{
+           setActiveData(newData)
+       }
+       
+       
     }
     const deleteTodo = (text)=>{
         let newData = data.filter((item,index)=>index !== text);

@@ -14,7 +14,7 @@ function List({data,setCompleted,deleteTodo,filterData,clearCompleted,filter}) {
                 return(
                     <div key={index} className={item.completed?'item completed':'item active'}>
                         <div className="circle-text">
-                            <div className="circle" onClick={()=>setCompleted(index)}>
+                            <div className="circle" onClick={()=>setCompleted(item.text)}>
                                 {item.completed && <img src={checkIcon} alt='check icon'/>}
                             </div>
                             <p onClick={()=>setCompleted(index)}>{item.text}</p>
