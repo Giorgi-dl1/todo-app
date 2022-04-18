@@ -137,16 +137,14 @@ body{
     cursor: pointer;
 }
 .delete-btn{
-    filter: brightness(51%);
+    display: none;
     left: 2rem;
 }
 
 .active:hover .delete-btn{
+    display: block;
     filter: brightness(100%);
     cursor: pointer;
-}
-.light .todo-container .todo .todos .todos-cont .active .delete-btn{
-    filter: brightness(100);
 }
 .light .todo-container .todo .todos .todos-cont .active:hover .delete-btn{
     filter: brightness(100%);
