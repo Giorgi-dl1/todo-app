@@ -5,8 +5,8 @@ import moon from '../images/icon-moon.svg'
 
 function Todo({light,setLight}) {
     const [data,setData] = useState([
-        {text:'add light mode',completed:false},
-        {text:'make todo list',completed:true},
+        {text:'my app has night mode',completed:true},
+        {text:'this todo app is responsive',completed:true},
         {text:'my list is sortable',completed:false}
     ]);
     const [activeData,setActiveData]=useState(data);
