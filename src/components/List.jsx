@@ -14,7 +14,7 @@ function List({
         {data.length === 0 ? (
           <div className="no-todos">No todos left</div>
         ) : (
-          data.map((item, index) => {
+          data?.map((item, index) => {
             return (
               <div
                 key={index}
@@ -43,7 +43,7 @@ function List({
       <footer>
         <div className="items-left">
           <p>
-            {data.filter((item) => item.completed === false).length} items left
+            {data?.filter((item) => item.completed === false).length} items left
           </p>
         </div>
         <div className="filter">

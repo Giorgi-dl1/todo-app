@@ -4,11 +4,7 @@ import sun from "../images/icon-sun.svg";
 import moon from "../images/icon-moon.svg";
 
 function Todo({ light, setLight }) {
-  const [data, setData] = useState([
-    { text: "my app has night mode", completed: true },
-    { text: "this todo app is responsive", completed: true },
-    { text: "my list is sortable", completed: false },
-  ]);
+  const [data, setData] = useState([]);
   const [activeData, setActiveData] = useState(data);
   const [input, setInput] = useState("");
   const [filter, setFilter] = useState("all");
